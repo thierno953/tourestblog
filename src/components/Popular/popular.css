@@ -1,0 +1,67 @@
+.popular-card :is(.card-price, .card-rating) {
+    color: var(--white-1);
+    font-size: var(--fs-8);
+    padding: 5px 8px;
+    border-radius: var(--radius-6);
+}
+
+.popular-card .card-price {
+    background: var(--viridian-green);
+}
+
+.popular-card .card-rating {
+    background: var(--mikado-yellow);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.popular-card .card-rating ion-icon {
+    font-size: 17px;
+}
+
+.popular-card .card-rating data {
+    margin-left: 4px;
+}
+
+.popular-card .card-location {
+    color: var(--spanish-gray);
+}
+
+@media (min-width: 768px) {
+    .popular-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (min-width: 992px) {
+    :root {
+        --fs-2: 3.5rem;
+        --fs-3: 4.4rem;
+        --section-padding: 60px;
+    }
+
+    .container {
+        max-width: 980px;
+    }
+
+    .popular-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    :root {
+        --fs-1: 6rem;
+    }
+
+    .container {
+        max-width: 1150px;
+    }
+
+    :is(.popular) .card-content {
+        padding: 30px;
+    }
+
+}
